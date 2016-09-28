@@ -1,12 +1,20 @@
+
+
+
+
 def isbn(pro)
-    #pro.to_s.split(//).map{|chr| chr.to_i} #take intiger from test and convert it to a string then split the string and map it to an array by character and make each character in the array an intiger
-	if pro.to_s.length == 10
-        'valid'
+    ar_int = pro.to_s.split(//).map{|chr| chr.to_i}
+    #pro.to_s.split(//).map{|chr| chr.to_i} #take intiger from test and convert it to a string then split #the string and map it to an array by character and make each character in the array an intiger
+    if pro.to_s.length == 10
+    'valid'
     elsif pro.to_s.length == 13
-        'valid'
+    'valid'
     else
-        'invalid'
+    'invalid'
     end
+    puts ar_int # ar_int is an array of intigers that i can use to do math for further validation
 end
 
-#1234567891 '1234567891' '1, 2, 3, ...' {1, 2, 3, ...}
+# pro3 = 1234567891
+
+# isbn(pro3)
