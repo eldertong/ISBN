@@ -1,5 +1,5 @@
 def isbn(pro)
-	if pro.last = 10
+	if pro.length = 10
         "valid"
     end
 end
