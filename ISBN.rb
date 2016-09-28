@@ -12,7 +12,7 @@ def isbn(pro)
     else
     'invalid'
     end
-    puts ar_int # ar_int is an array of intigers that i can use to do math for further validation
+    #puts ar_int # ar_int is an array of intigers that i can use to do math for further validation
 end
 
 # pro3 = 1234567891
