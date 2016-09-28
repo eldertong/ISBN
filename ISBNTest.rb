@@ -7,3 +7,5 @@ class TestIsbn <Minitest::Test
 		assert_equal("valid", isbn(prop))
 	end
 end
+
+#test
