@@ -6,6 +6,10 @@ class TestIsbn <Minitest::Test
 		pro = 1234567891
 		assert_equal('valid', isbn(pro))
 	end
+	def test_nine_digit_number_results_invalid
+		pro = 123456789
+		assert_equal('invalid', isbn(pro))
+		end
 end
 
 #test
