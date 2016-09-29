@@ -6,11 +6,11 @@ def isbn(pro)
     ar_int = pro.split(//).map{|chr| chr.to_i}
     #pro.to_s.split(//).map{|chr| chr.to_i} #take intiger from test and convert it to a string then split #the string and map it to an array by character and make each character in the array an intiger
     if pro.gsub(/[^0-9,^x,.]/, "").length == 10
-    'valid length'
+    'valid'
     elsif pro.gsub(/[^0-9,^x,.]/, "").length == 13
-    'valid length'
+    'valid'
     else
-    'invalid length'
+    'invalid'
     end
     #puts ar_int # ar_int is an array of intigers that i can use to do math for further validation
 end
