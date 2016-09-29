@@ -3,7 +3,7 @@
 
 
 def isbn(pro)
-    ar_int = pro.split(//).map{|chr| chr.to_i}
+    # ar_int = pro.split(//).map{|chr| chr.to_i}
     #pro.to_s.split(//).map{|chr| chr.to_i} #take intiger from test and convert it to a string then split #the string and map it to an array by character and make each character in the array an intiger
     if pro.gsub(/[^0-9,^x,.]/, "").length == 10
         ar_int = pro.split(//).map{|chr| chr.to_i}
@@ -11,7 +11,7 @@ def isbn(pro)
         if check_sum == ar_int.last
             "valid"
         else
-             "invalid"
+            "invalid"
         end
     elsif pro.gsub(/[^0-9,^x,.]/, "").length == 13
     'valid'
