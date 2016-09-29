@@ -21,7 +21,11 @@ class TestIsbn <Minitest::Test
 	def test_ten_digit_with_space_valid_length
 		pro = "1 23456789 1"
 		assert_equal('valid length', isbn(pro))
-		end
+	end
+		def test_ten_digit_with_dashes_valid_length
+		pro = "1-2-3 45- 6789 1"
+		assert_equal('valid length', isbn(pro))
+	end
 end
 
 #test
