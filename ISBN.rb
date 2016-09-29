@@ -5,9 +5,9 @@
 def isbn(pro)
     ar_int = pro.split(//).map{|chr| chr.to_i}
     #pro.to_s.split(//).map{|chr| chr.to_i} #take intiger from test and convert it to a string then split #the string and map it to an array by character and make each character in the array an intiger
-    if pro.length == 10
+    if pro.lstrip.length == 10
     'valid length'
-    elsif pro.length == 13
+    elsif pro.lstrip.length == 13
     'valid length'
     else
     'invalid length'
