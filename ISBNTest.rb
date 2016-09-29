@@ -26,6 +26,10 @@ class TestIsbn <Minitest::Test
 		pro = "1-2-3 45- 6789 1"
 		assert_equal('valid length', isbn(pro))
 	end
+		def test_ten_digit_with_x_valid_length
+		pro = "877195869x"
+		assert_equal('valid length', isbn(pro))
+	end
 end
 
 #test
