@@ -30,6 +30,10 @@ class TestIsbn <Minitest::Test
 		pro = "877195869x"
 		assert_equal('valid length', isbn(pro))
 	end
+	def test_ten_digit_with_at_symbol_invalid_length
+		pro = "0-321@14653-0"
+		assert_equal('valid length', isbn(pro))
+	end
 end
 
 #test
