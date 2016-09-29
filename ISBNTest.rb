@@ -18,6 +18,10 @@ class TestIsbn <Minitest::Test
 		pro = "12345678912345678912"
 		assert_equal('invalid length', isbn(pro))
 	end
+	def test_ten_digit_with_space_valid_length
+		pro = "1 23456789 1"
+		assert_equal('valid length', isbn(pro))
+		end
 end
 
 #test
