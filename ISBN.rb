@@ -1,7 +1,39 @@
-def isbn(pro)
-    pro = pro.gsub(/[^0-9,^x,.]/, "")
+def length(number)
+	ten = 0
+	thirteen = 0
+    number = number.gsub(/[^0-9,^x,.]/, "")
+	if number.length == 10
+		ten = (proten)
+	elsif number.length == 13
+	 	thirteen = (prothirteen)
+	end
+end
+
+def isbn(proten)
+    proten = proten.gsub(/[^0-9,^x,.]/, "")
+    arproten = proten.split(//,)
+    arproten = arproten.map(&:to_i)
+    sum = 0
+    arproten.each.with_index do |value, index|
+        break if index == 9
+        sum += value * (index + 1)
+    end
+    check = sum % 11
+
+    if check == arproten[9]
+        true
+    else
+        false
+    end
+
+    check == arproten[9]
+
+end
+
+def isbnthirteen(prothirteen)
+    prothirteen = prothirteen.gsub(/[^0-9,^x,.]/, "")
     arpro = pro.split(//,)
-    arpro = arpro.map(&:to_i)
+    arprothirteen = arprothirteen.map(&:to_i)
     sum = 0
     arpro.each.with_index do |value, index|
         break if index == 9
@@ -9,17 +41,15 @@ def isbn(pro)
     end
     check = sum % 11
 
-    if check == arpro[9]
+    if check == arprothirteen[9]
         true
     else
         false
     end
 
-    check == arpro[9]
+    check == arprothirteen[9]
 
 end
-
-
 
 
 
