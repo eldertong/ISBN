@@ -31,4 +31,5 @@ def isbn10(pro)
 end
 
 def isbn13(pro3)
-    
+    'valid thirteen digit isbn'
+end
