@@ -24,4 +24,5 @@ def isbn10(pro)
         "valid ten digit isbn"
     else
         "invalid ten digit isbn"
+    end
 end
