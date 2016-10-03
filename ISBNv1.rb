@@ -2,7 +2,6 @@ def isbn(leng)
     leng = leng.gsub(/[^0-9,^x,.]/, "")
     if leng.length == 10
         "valid 10"
-
     elsif leng.length == 13
         "valid 13"
     else
