@@ -26,6 +26,7 @@ def isbn10(pro)
     if check10 == pro[9]  #this compares the checksum and the 10th number in the array, which should be the checksum
         "valid ten digit isbn"
     else
+        
         "invalid ten digit isbn"
     end
 end
