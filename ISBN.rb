@@ -21,6 +21,8 @@ def isbn(pro)
     #puts ar_int # ar_int is an array of intigers that i can use to do math for further validation
 end
 
+#i think im trying to do too much in this one function.... im going to try to start again
+
 # pro3 = 1234567891
 # look into regex
 # isbn(pro3)
