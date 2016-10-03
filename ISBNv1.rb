@@ -1,7 +1,9 @@
-def isbn(length)
-    if length.length == 10
-       puts  "valid"
+def isbn(leng)
+    if leng.length == 10
+        "valid_ten"
+    elsif leng.length == 13
+        "valid_thirteen"
     else
-       puts  "invalid"
+        "invalid_length"
     end
 end
