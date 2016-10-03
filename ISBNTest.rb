@@ -36,7 +36,7 @@ class TestIsbn <Minitest::Test
 	# end
 	def test_valid_ten_digit_isbn_returns_valid
 		pro = "0471958697"
-		assert_equal('valid', isbn(pro))
+		assert_equal(true, isbn(pro))
 	end
 end
 
