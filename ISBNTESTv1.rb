@@ -26,8 +26,8 @@ class TestIsbn <Minitest::Test
 		leng = "9780470059029"
 		assert_equal('valid 13', isbn(leng))
 	end
-    # def test_10_isbn_returns_valid_isbn
-	# 	leng = "0471958697"
-	# 	assert_equal("valid ten digit isbn", isbn(leng))
-    # end
+    def test_10_isbn_returns_valid_isbn
+		pro = "0471958697"
+		assert_equal("valid ten digit isbn", isbn10(pro))
+    end
 end
