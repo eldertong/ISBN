@@ -36,18 +36,23 @@ def isbnthirteen(prothirteen)
     arprothirteen = arprothirteen.map(&:to_i)
     sum = 0
     arpro.each.with_index do |value, index|
-        break if index == 9
-        sum += value * (index + 1)
-    end
-    check = sum % 11
+        break if index == 13
+         if index % 2 == 0
+             sum += value * 1
+        else
+            sum += value * 3
+		end
+	end
+    checksum = sum % 10
+	checksum1 = (10 - checksum)
 
-    if check == arprothirteen[9]
-        true
-    else
-        false
-    end
+	if checksum1 == array[12]
+		true
+	else
+		false
+	end
 
-    check == arprothirteen[9]
+	checksum == array[12]
 
 end
 
