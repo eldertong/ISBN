@@ -29,3 +29,6 @@ def isbn10(pro)
         "invalid ten digit isbn"
     end
 end
+
+def isbn13(pro3)
+    
