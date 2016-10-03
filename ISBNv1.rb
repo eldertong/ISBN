@@ -1,9 +1,9 @@
 def isbn(leng)
     if leng.length == 10
-        "valid_ten"
+        "valid 10"
     elsif leng.length == 13
-        "valid_thirteen"
+        "valid 13"
     else
-        "invalid_length"
+        'invalid length'
     end
 end
