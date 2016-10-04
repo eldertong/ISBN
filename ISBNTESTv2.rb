@@ -1,5 +1,5 @@
 require "minitest/autorun"
-require_relative "isbnv2.rb"
+require_relative "isbnv1.rb"
 
 class TestIsbn <Minitest::Test
 	def test_valid_ten_digit_isbn_returns_valid_length
