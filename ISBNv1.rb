@@ -32,19 +32,18 @@ end
 
 def isbn13(pro3)
     pro3 = pro3.gsub(/[^0-9,^x,.]/, "")
-    13arr = pro3.split(//)
+    13arr = pro3.split(//,)
     13arr = 13arr.map(&:to_i)
     sum = 0
     13arr.each.with_index do |value, index|
         break if index == 12
         if index % 2 == 0
-            sum += value
+            sum += (value * 1)
         else
-            sum += value * 3
+            sum += (value * 3)
         end
     end
-
-    chek = sum % 110
+    chek = sum % 10
     check1 = (10 - chek)
 
     if check1 == 13arr[12]
