@@ -38,4 +38,8 @@ class TestIsbn <Minitest::Test
 		pro3 = "9780470059029"
 		assert_equal('valid thirteen digit isbn', isbn13(pro3))
     end
+    def test_13_invalid_isbn_returns_invalid_isbn
+		pro3 = "9780470059027"
+		assert_equal('invalid thirteen digit isbn', isbn13(pro3))
+    end
 end

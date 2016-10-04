@@ -31,5 +31,26 @@ def isbn10(pro)
 end
 
 def isbn13(pro3)
-    'valid thirteen digit isbn'
+    pro3 = pro3.gsub(/[^0-9,^x,.]/, "")
+    13arr = pro3.split(//,)
+    13arr = 13arr.map(&:to_i)
+    sum = 0
+    13arr.each.with_index do |value, index|
+        break if index == 12
+        if index % 2 == 0
+            sum += value
+        else
+            sum += value * 3
+        end
+    end
+
+    chek = sum % 110
+    check1 = (10 - chek)
+
+    if check1 == 13arr[12]
+        'valid thirteen digit isbn'
+    else
+        'invalid thirteen digit isbn'
+    end
+end
 end
