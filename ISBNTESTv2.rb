@@ -6,3 +6,4 @@ class TestIsbn <Minitest::Test
 		isbn = "0471958697"
 		assert_equal(true, valid_isbn?(isbn))
 	end
+end
