@@ -19,7 +19,12 @@ def valid_isbn_ten_check_sum?(isbn)
         break if index == 9
         sum += (index + 1) * value
     end
-    if sum % 11 == ten_digit_array.last
+    check_sum = sum % 11
+    if check_sum == 10
+        check_sum = "x"
+    end
+    check_sum_string == check_sum.to_s
+    if check_sum_string == isbn[-1]
         true
     else
         false
