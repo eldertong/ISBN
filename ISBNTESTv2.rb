@@ -22,4 +22,16 @@ class TestIsbn <Minitest::Test
 		isbn = "0471958699"
 		assert_equal(false, valid_isbn?(isbn))
 	end
+	def test_valid_isbn_10_returns_true
+		isbn = "2471958699"
+		assert_equal(true, valid_isbn?(isbn))
+	end
+	def test_valid_isbn_10_with_spaces_dashes_returns_true
+		isbn = "2 4- 71-9   58699"
+		assert_equal(true, valid_isbn?(isbn))
+	end
+	def test_valid_isbn_10_with_an_x_at_the_end_returns_true
+		isbn = "877195869x"
+		assert_equal(true, valid_isbn?(isbn))
+	end
 end
