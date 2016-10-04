@@ -1,3 +1,7 @@
 def valid_isbn?(isbn)
-    true
+    if isbn.length == 10
+        true
+    else
+        false
+    end
 end
