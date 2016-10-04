@@ -1,5 +1,5 @@
 def valid_isbn?(isbn)
-    isbn = remove_spaces(isbn)
+    isbn = remove_spaces(isbn) #calls the function referenced and redefines isbn
     isbn = remove_dashes(isbn)
     isbn.length == 10 #same as doing and if else statement
 end

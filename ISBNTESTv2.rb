@@ -18,4 +18,8 @@ class TestIsbn <Minitest::Test
 		isbn = "0-47-19 58 697"
 		assert_equal(true, valid_isbn?(isbn))
 	end
+	def test_invalid_isbn_10_returns_false
+		isbn = "0471958699"
+		assert_equal(false, valid_isbn?(isbn))
+	end
 end
