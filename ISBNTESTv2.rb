@@ -34,8 +34,12 @@ class TestIsbn <Minitest::Test
 		isbn = "877195869x"
 		assert_equal(true, valid_isbn?(isbn))
 	end
-	# def test_valid_isbn_10_with_a_capital_x_at_the_end_returns_true
-	# 	isbn = "877195869X"
-	# 	assert_equal(true, valid_isbn?(isbn))
-	# end
+	def test_valid_isbn_10_with_a_capital_x_at_the_end_returns_true
+		isbn = "877195869X"
+		assert_equal(true, valid_isbn?(isbn))
+	end
+	def test_invalid_isbn_10_with_a_capital_x_at_the_end_returns_false
+		isbn = "877195861X"
+		assert_equal(false, valid_isbn?(isbn))
+	end
 end
