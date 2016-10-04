@@ -1,7 +1,7 @@
 def valid_isbn?(isbn)
     isbn = remove_spaces(isbn) #calls the function referenced and redefines isbn
     isbn = remove_dashes(isbn)
-    if isbn.length == 10 && isbn[9] == "7" #same as doing and if else statement
+    if valid_isbn_ten_length?(isbn) && valid_isbn_ten_check_sum?(isbn)
         true
     else
         false
@@ -14,6 +14,16 @@ def valid_isbn?(isbn)
     #     sum += (index + 1) * value
     # end
 end
+
+def valid_isbn_ten_length?(isbn)
+    isbn.length == 10
+end
+
+
+def valid_isbn_ten_check_sum?(isbn)
+    isbn[9] == "7" #this checks the 9th position in the string to see if it = 7
+end
+
 
 def remove_spaces(isbn)
     isbn.gsub(" ", "") #this strips the whitespace and redifines isbn by using the !. remember ! is permenantish
