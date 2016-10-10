@@ -5,16 +5,15 @@ get '/' do
 	erb :welcome
 end
 
-post '/name' do
-	name = params[:input_name]
-	redirect '/age?input_name=' + name
+post '/isbn' do
+	isbn = params[:isbn]
+	redirect '/result?isbn=' + isbn
 end
 
-get '/fav_nums' do
-	age = params[:age]
-	name = params[:input_name]
+get '/result' do
+	isbn = params[:isbn]
 
-	erb :fav_nums, :locals => {:name => name, :age => age}
+	erb :fav_nums, :locals => {:isbn => isbn}
 
 end
 
@@ -24,6 +23,7 @@ post '/fav_nums' do
 	favnum1 = params[:num1]
 	favnum2 = params[:num2]
 	favnum3 = params[:num3]
+end
 
 get '/contact' do
 	erb :contact
