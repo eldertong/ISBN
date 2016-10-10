@@ -12,17 +12,13 @@ end
 
 get '/result' do
 	isbn = params[:isbn]
-
-	erb :fav_nums, :locals => {:isbn => isbn}
+	erb :result, :locals => {:isbn => isbn}
 
 end
 
-post '/fav_nums' do
-	age = params[:age]
-	name = params[:input_name]
-	favnum1 = params[:num1]
-	favnum2 = params[:num2]
-	favnum3 = params[:num3]
+post '/result' do
+	isbn = params[:isbn]
+	result = valid_isbn?(isbn)
 end
 
 get '/contact' do
