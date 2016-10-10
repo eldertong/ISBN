@@ -10,3 +10,11 @@ post '/name' do
 	redirect '/age?input_name=' + name
 
 end
+
+get '/contact' do
+	erb :contact
+end
+
+get '/about' do
+	erb :about
+end
