@@ -18,7 +18,7 @@ end
 
 post '/result' do
 	isbn = params[:isbn]
-	result = valid_isbn?(isbn)
+	butterfly = valid_isbn?(isbn)
 end
 
 get '/contact' do
