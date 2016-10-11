@@ -13,7 +13,7 @@ end
 get '/result' do
 	isbn = params[:isbn]
 	monkey_anus = valid_isbn?(isbn)
-	erb :result, :locals => {:monkey_anus => true, :isbn => isbn}
+	erb :result, :locals => {:monkey_anus => monkey_anus, :isbn => isbn}
 
 end
 
