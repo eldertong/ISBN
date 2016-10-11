@@ -14,7 +14,6 @@ get '/result' do
 	isbn = params[:isbn]
 	result = valid_isbn?(isbn)
 	erb :result, :locals => {:result => result, :isbn => isbn}#this is the important stuff
-
 end
 
 # post '/result' do
