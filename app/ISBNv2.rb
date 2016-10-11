@@ -3,10 +3,13 @@ def valid_isbn?(isbn)
     isbn = remove_dashes(isbn)
     if valid_isbn_ten_length?(isbn) && valid_isbn_ten_check_sum?(isbn)
         true
+        puts 1
     elsif valid_isbn_thirteen_length?(isbn) && valid_isbn_thirteen_check_sum?(isbn)
         true
+        puts 2
     else
         false
+        puts 3
     end
 end
 

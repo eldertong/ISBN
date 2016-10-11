@@ -12,14 +12,15 @@ end
 
 get '/result' do
 	isbn = params[:isbn]
-	erb :result, :locals => {:isbn => isbn}
+	monkey_anus = valid_isbn?(isbn)
+	erb :result, :locals => {:monkey_anus => true, :isbn => isbn}
 
 end
 
-post '/result' do
-	isbn = params[:isbn]
-	butterfly = valid_isbn?(isbn)
-end
+# post '/result' do
+# 	isbn = params[:isbn]
+# 	@butterfly = valid_isbn?(isbn)
+# end
 
 get '/contact' do
 	erb :contact
